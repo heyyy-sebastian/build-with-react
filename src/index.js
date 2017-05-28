@@ -6,7 +6,10 @@ var ipsumText = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Intege
 
 ReactDOM.render(
   <div>
-    // Your work here
+    <div>
+    <div href="#" className="button">Button</div>
+    <p>{ipsumText}</p>
+  </div>,
   </div>,
   document.getElementById('impl')
 );
