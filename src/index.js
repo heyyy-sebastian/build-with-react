@@ -89,7 +89,9 @@ var BoardSwitcher = React.createClass({
   },
 
   onToggleClick: function(evt) {
-    //do stuff
+    this.setState({
+      selectedIndex: (this.state.selectedIndex + 1) % this.props.numBoards
+    })
   },
 
   render: function() {
