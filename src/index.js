@@ -97,7 +97,8 @@ var BoardSwitcher = React.createClass({
   render: function() {
     var boards = [];
     for (var ii = 0; ii < this.props.numBoards; ii++) {
-      var isSelected = ii === 0;
+      //set state so it's not exclusively the first tile
+      var isSelected = ii === this.state.selectedIndex;
       boards.push(
         <Board index={ii} selected={isSelected} key={ii} />
       );
@@ -106,7 +107,8 @@ var BoardSwitcher = React.createClass({
     return (
       <div>
         <div className="boards">{boards}</div>
-        <button>Toggle</button>
+        //add onClick event to btn
+        <button onClick={this.onToggleClick}>Toggle</button>
       </div>
     );
   }
